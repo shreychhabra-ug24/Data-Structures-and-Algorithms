@@ -65,5 +65,26 @@ int main(){
         else{tail->next  = new_node;
         tail = new_node;}
 }
+printf("Original List: \n");
 prt(head);
+rev(&head);
+printf("Reversed List: \n");
+prt(head);
+}
+
+//we can also create a function to reverse the list
+//**head2 is a pointer to a pointer 
+//allows us to modify the original pointer
+void rev(struct node **head2){  
+    struct node *prev = NULL;
+    struct node *current  = *head2;
+    struct ndoe *next  = NULL;
+
+    while(current!=NULL){
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *head2 = prev;
 }
