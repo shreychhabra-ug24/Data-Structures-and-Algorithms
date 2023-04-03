@@ -19,6 +19,7 @@ void prt(struct node *n){
 }
 
 //creating 3 nodes and then malloc()
+//long version
 /*int main(){
     struct node *head;
     struct node *a = NULL;
