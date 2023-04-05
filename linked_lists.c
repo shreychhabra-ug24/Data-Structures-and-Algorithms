@@ -52,7 +52,9 @@ struct node *nodename = (struct node*) malloc(sizeof(struct node));
 //we can use for loops to do this
 //for example, if we have 100 nodes
 int main(){
-    int num_nodes = 100;
+    int num_nodes;
+    printf("Enter number of nodes: ");
+    scanf("%d", &num_nodes);
     struct node *head = NULL;
     struct node *tail = NULL;
     for(int i = 0; i<=num_nodes; i++){
@@ -65,10 +67,10 @@ int main(){
         else{tail->next  = new_node;
         tail = new_node;}
 }
-printf("Original List: \n");
+printf("Regular Linked List: \n");
 prt(head);
 rev(&head);
-printf("Reversed List: \n");
+printf("Reversed Linked List: \n");
 prt(head);
 }
 
