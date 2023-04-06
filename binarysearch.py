@@ -15,7 +15,8 @@ def bin_search(data, target, low, high):
         else:
             return bin_search(data, target, mid+1, high)
 
-arr = [1,2,3,4,5,6,7,9,210,420,840]
+arr = [i for i in range(0,10000)]
+
 target = int(input("Enter element to search for in list: "))
 
 res = bin_search(arr, target, 0, len(arr)-1)
